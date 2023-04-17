@@ -1,5 +1,5 @@
 {
-  "name": "fancyinput",
+  "name": "@myspace-nu/fancyinput",
   "version": "0.9.0",
   "description": "A text input replacement with text formatting",
   "main": "dist/fancyinput.min.js",
