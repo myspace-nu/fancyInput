@@ -6,6 +6,10 @@ A html text input replacement with text formatting
 [![Code size](https://img.shields.io/github/languages/code-size/myspace-nu/fancyInput)](https://github.com/myspace-nu/fancyInput)
 [![Issues](https://img.shields.io/github/issues-raw/myspace-nu/fancyInput)](https://github.com/myspace-nu/fancyInput/issues)
 
+## Live demo
+
+See a live demo on [CodePen](https://codepen.io/myspace-nu/pen/vYVKgYO)
+
 ## Usage
 
 	<input type="text" class="form-control" />
