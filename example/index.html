@@ -1,0 +1,48 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+	<title>Fancyinput</title>
+	<style>
+		.container {
+			margin: 2em;
+		}
+		.focus {
+			border-color: #86b7fe !important;
+			outline: 0;
+			box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
+		}
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sanitize-html/1.27.5/sanitize-html.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h4>Normal input</h4>
+				<input type="text" class="form-control" value="Plain text only." />
+			</div>
+			<div class="col">
+				<h4>Fancyinput</h4>
+				<input type="text" class="form-control fancy"
+					value="Example with &lt;b&gt;bold&lt;/b&gt;, &lt;i&gt;italic&lt;/i&gt; and &lt;u&gt;underline&lt;/u&gt;." />
+				<p>Use [CTRL][B] for bold, [CTRL][I] for italic and [CTRL][U] for underline.</p>
+			</div>
+		</div>
+	</div>
+	<script src="../js/fancyinput.js"></script>
+	<script>
+		let myFancyInput = new fancyInput('input.fancy', {
+			onChange: (value, evt, elm) => {
+				return sanitizeHtml(value, {
+					allowedTags: ['b', 'i', 'u', 'em', 'strong', 'a', 'div', 'span', 'br', 'p'],
+					allowedAttributes: {
+						'a': ['href'],
+						'span': ['style']
+					}
+				});
+			}
+		});
+	</script>
+</body>
+</html>

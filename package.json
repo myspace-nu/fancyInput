@@ -1,0 +1,26 @@
+{
+  "name": "fancyinput",
+  "version": "0.9.0",
+  "description": "A text input replacement with text formatting",
+  "main": "dist/fancyinput.min.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "keywords": [
+    "input",
+    "text",
+    "html",
+    "formatting"
+  ],
+  "author": "Johan Johansson",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "grunt": "^1.5.3",
+    "grunt-contrib-uglify": "^5.2.2",
+    "grunt-eslint": "^24.0.0"
+  }
+}
